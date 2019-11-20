@@ -23,3 +23,11 @@ bot.on('message', function (msg) {
     bot.sendPhoto(chatId, photo, { caption: 'Милые котята' });
 });
 
+const Telegraf = require('telegraf')
+
+const bot = new Telegraf(process.env.1029407549:AAHNiAJkrkGII6igOHTJYdpKbSGTNnVrJQ8)
+bot.start((ctx) => ctx.reply('Привет! Как твои дела?'))
+bot.help((ctx) => ctx.reply('Чем я могу тебе помочь?'))
+bot.on('sticker', (ctx) => ctx.reply(''))
+bot.hears('Привет', (ctx) => ctx.reply('И тебе привет :)'))
+bot.launch()
